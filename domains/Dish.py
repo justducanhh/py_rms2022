@@ -1,0 +1,1 @@
+'Every dish on menu is an object of this class'
