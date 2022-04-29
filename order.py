@@ -45,6 +45,12 @@ def submit_edition(eff, e: Entry, t: Toplevel):
 
 
 def edit_order(event):
+    if len(table.selection()) == 0:
+        err = Toplevel(root)
+        err.title("ERROR")
+        message = Label(err, text="You did not select the dish to edit!", font=("Arial", 50))
+        message.pack()
+        return
     pop = Toplevel()
     pop.resizable(False, False)
     pop.title("Edit quantity")
